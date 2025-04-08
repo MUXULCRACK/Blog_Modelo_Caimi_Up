@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog del CAIMIUP</title>
+ 
+    
+  </style>
+</head>
+<body>
+
+
+  
+  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -92,6 +101,8 @@
       border-left: 5px solid #990000;
       border-radius: 5px;
     }
+  
+  
 
     footer {
       background-color: #990000;
@@ -100,14 +111,29 @@
       padding: 15px;
       margin-top: 60px;
     }
+   
+   
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Blog del CAIMIUP</h1>
-    <button class="login-button" onclick="window.location.href='login.html'">Iniciar Sesión</button>
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; background-color: #990000; color: white;">
+    <div style="display: flex; align-items: center;">
+      <div class="logo" style="width: 70px; height: 100px; border-radius: 50% / 70%; overflow: hidden; background-color: none; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+        <!-- Aquí va el logo (reemplaza src por tu imagen) -->
+        <img src="logo.webp" alt="Logo CAIMIUP" style="max-height: 100%; max-width: 100%;" />
+      </div>
+      <h1 style="margin: 0;">Blog del CAIMIUP</h1>
+    </div>
+  
+    <nav style="flex-grow: 1; text-align: center;">
+      <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Home</a>
+      <a href="acerca.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Acerca de Nosotros</a>
+    </nav>
+  
+    <button class="login-button" onclick="window.location.href='login.html'" style="background-color: white; color: #990000; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Iniciar Sesión</button>
   </header>
+  
 
   <div class="container">
     <section class="sobre">
@@ -139,7 +165,26 @@
   </div>
 
   <footer>
+    
+    <div class="social-icons" style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+      <a href="https://www.facebook.com/Caimiupunipamplona/">
+        <img src="facebook.png" alt="Facebook" style="width: 50px; height: 50px;" />
+      </a>
+      <a href="https://www.instagram.com/caimiupunipamplona/">
+        <img src="instagram.webp" alt="Instagram" style="width: 50px; height: 50px;" />
+      </a>
+      <a href="https://www.youtube.com/@UnipamplonaTv">
+        <div style="width: 50px; height: 50px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <img src="youtube.png" alt="YouTube" style="width: 30px; height: 30px;" />
+        </div>
+      </a>
+    </div>
+    
+    <div class="horario">
+      <p>Horario de Atención: Lunes a Viernes de 8:00 am a 12:00 m y de 2:00 pm a 5:00 pm</p>
+    </div>
     &copy; 2025 CAIMIUP - Universidad de Pamplona
+  
   </footer>
 
 </body>
