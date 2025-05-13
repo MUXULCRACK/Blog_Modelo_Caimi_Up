@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Causa o Motivo - CAIMIUP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef7ff;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #990000;
+    }
+
+    form {
+      background: #d6ebff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      border-left: 5px solid #0066cc;
+    }
+
+    label {
+      font-size: 16px;
+      color: #333;
+    }
+
+    input[type="date"], input[type="file"], textarea, input[type="submit"] {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      height: 80px;
+    }
+
+    input[type="submit"] {
+      background-color: #009966;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #007744;
+    }
+
+    .limite {
+      color: red;
+      font-weight: bold;
+    }
+
+    .mensaje {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Causa o Motivo</h1>
+  <p>Por favor, complete el formulario a continuación si no podrá dictar clase debido a una causa o motivo. Recuerde que debe solicitarlo con al menos tres días de antelación.</p>
+
+  <form id="motivoForm" onsubmit="return validarMotivo()">
+    <label for="fechaMotivo">Fecha del Motivo:</label>
+    <input type="date" id="fechaMotivo" name="fechaMotivo" required><br>
+
+    <label for="causa">Especificar Causa o Motivo:</label>
+    <textarea id="causa" name="causa" placeholder="Describe la causa o motivo por el cual no podrás dictar clase." required></textarea><br>
+
+    <label for="comprobante">Adjuntar Comprobante (PDF):</label>
+    <input type="file" id="comprobante" name="comprobante" accept=".pdf" required><br>
+
+    <p class="limite">Recuerda: Solo puedes solicitarlo con al menos tres días de antelación.</p>
+
+    <p id="mensaje" class="mensaje"></p>
+
+    <input type="submit" value="Enviar Solicitud de Motivo">
+  </form>
+
+  <script>
+    // Función para validar la causa o motivo
+    function validarMotivo() {
+      // Obtener la fecha del motivo
+      const fechaMotivo = document.getElementById('fechaMotivo').value;
+
+      // Verificar que la fecha seleccionada sea al menos tres días después de la fecha actual
+      const hoy = new Date();
+      const tresDiasDespues = new Date();
+      tresDiasDespues.setDate(hoy.getDate() + 3);
+
+      const motivoFecha = new Date(fechaMotivo);
+
+      // Validar que la fecha del motivo sea válida (al menos tres días después)
+      if (motivoFecha < tresDiasDespues) {
+        document.getElementById('mensaje').textContent = 'La fecha debe ser al menos 3 días después de la fecha actual.';
+        return false; // Bloquear el envío del formulario
+      }
+
+      // Verificar si se adjuntó un archivo PDF
+      const archivo = document.getElementById('comprobante').files[0];
+      if (!archivo || archivo.type !== 'application/pdf') {
+        document.getElementById('mensaje').textContent = 'Debes adjuntar un archivo PDF como comprobante.';
+        return false; // Bloquear el envío del formulario
+      }
+
+      // Si todo es correcto, mostramos un mensaje de éxito
+      document.getElementById('mensaje').textContent = 'Motivo solicitado con éxito.';
+      return true; // Permitir el envío del formulario
+    }
+  </script>
+</body>
+</html>

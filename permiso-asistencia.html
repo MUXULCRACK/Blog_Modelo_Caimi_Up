@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Solicitud de Permiso - CAIMIUP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fff0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #006633;
+      text-align: center;
+    }
+
+    form {
+      background-color: white;
+      padding: 25px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="file"] {
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #009966;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #007744;
+    }
+  </style>
+</head>
+<body>
+  <h1>Solicitud de Permiso de Inasistencia</h1>
+  <form>
+    <label for="nombre">Nombre del Estudiante:</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label for="fecha">Fecha de la Inasistencia:</label>
+    <input type="date" id="fecha" name="fecha" required />
+
+    <label for="motivo">Motivo del Permiso:</label>
+    <textarea id="motivo" name="motivo" rows="4" required></textarea>
+
+    <label>¿Presentará comprobantes?</label>
+    <select id="comprobante" name="comprobante">
+      <option value="no">No</option>
+      <option value="presencial">Sí, de forma presencial</option>
+      <option value="digital">Sí, en este formulario</option>
+    </select>
+
+    <div id="adjuntos">
+      <label for="archivo">Adjuntar Comprobante (PDF opcional):</label>
+      <input type="file" id="archivo" name="archivo" accept=".pdf" />
+    </div>
+
+    <button type="submit">Enviar Solicitud</button>
+  </form>
+</body>
+</html>
