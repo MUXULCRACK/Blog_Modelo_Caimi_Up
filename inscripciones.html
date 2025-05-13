@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Inscripción CAIMIUP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+
+    h1, h2 {
+      color: #990000;
+    }
+
+    form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .required::after {
+      content: " *";
+      color: red;
+    }
+
+    button {
+      background-color: #990000;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b30000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulario de Inscripción - CAIMIUP</h1>
+
+  <form>
+
+    <!-- DATOS DEL POSTULANTE -->
+    <div class="section">
+      <h2>Datos del Postulante</h2>
+      <label class="required">Tipo de Identificación</label>
+      <select required>
+        <option value="">Seleccione</option>
+        <option>RC</option>
+        <option>TI</option>
+        <option>CC</option>
+      </select>
+
+      <label class="required">Número de Identificación</label>
+      <input type="text" maxlength="30" required>
+
+      <label class="required">Nombre(s)</label>
+      <input type="text" maxlength="40" required>
+
+      <label class="required">Apellido(s)</label>
+      <input type="text" maxlength="40" required>
+
+      <label class="required">Fecha de Nacimiento</label>
+      <input type="date" required>
+
+      <label class="required">Departamento</label>
+      <select required>
+        <option value="">Seleccione</option>
+        <option>Norte de Santander</option>
+        <!-- Agrega más departamentos -->
+      </select>
+
+      <label class="required">Ciudad</label>
+      <select required>
+        <option value="">Seleccione</option>
+        <option>Pamplona</option>
+        <!-- Agrega más ciudades -->
+      </select>
+
+      <label class="required">Dirección</label>
+      <input type="text" maxlength="50" required>
+    </div>
+
+    <!-- DATOS DE LA MADRE -->
+    <div class="section">
+      <h2>Datos de la Madre</h2>
+      <label>Nombres/Apellidos</label>
+      <input type="text" maxlength="40">
+
+      <label>Tipo de Documento</label>
+      <select>
+        <option value="">Seleccione</option>
+        <option>CC</option>
+        <option>TI</option>
+      </select>
+
+      <label>Número de Documento</label>
+      <input type="text" maxlength="30">
+
+      <label>Teléfono</label>
+      <input type="tel">
+
+      <label>Dirección</label>
+      <input type="text" maxlength="50">
+
+      <label>E-mail</label>
+      <input type="email" maxlength="50">
+    </div>
+
+    <!-- DATOS DEL PADRE -->
+    <div class="section">
+      <h2>Datos del Padre</h2>
+      <label>Nombres/Apellidos</label>
+      <input type="text" maxlength="40">
+
+      <label>Tipo de Documento</label>
+      <select>
+        <option value="">Seleccione</option>
+        <option>CC</option>
+        <option>TI</option>
+      </select>
+
+      <label>Número de Documento</label>
+      <input type="text" maxlength="30">
+
+      <label>Teléfono</label>
+      <input type="tel">
+
+      <label>Dirección</label>
+      <input type="text" maxlength="50">
+
+      <label>E-mail</label>
+      <input type="email" maxlength="50">
+    </div>
+
+    <!-- RESPONSABLE -->
+    <div class="section">
+      <h2>Datos del Responsable</h2>
+      <div class="checkbox-group">
+        <input type="checkbox" id="responsableCheck">
+        <label for="responsableCheck">¿Tiene responsable?</label>
+      </div>
+
+      <label>Nombres/Apellidos</label>
+      <input type="text" maxlength="40">
+
+      <label>Tipo de Documento</label>
+      <select>
+        <option value="">Seleccione</option>
+        <option>CC</option>
+        <option>TI</option>
+      </select>
+
+      <label>Número de Documento</label>
+      <input type="text" maxlength="30">
+
+      <label>Teléfono</label>
+      <input type="tel">
+
+      <label>Dirección</label>
+      <input type="text" maxlength="50">
+
+      <label>E-mail</label>
+      <input type="email" maxlength="50">
+
+      <label>Parentesco</label>
+      <select>
+        <option value="">Seleccione</option>
+        <option>Abuela / Abuelo</option>
+        <option>Tío / Tía</option>
+        <option>Hermano / Hermana</option>
+        <option>Padrino / Madrina</option>
+        <option>Primo / Prima</option>
+        <option>Amigo</option>
+      </select>
+    </div>
+
+    <!-- ENFERMEDADES -->
+    <div class="section">
+      <h2>Condiciones Especiales</h2>
+      <label class="required">Alergias</label>
+      <input type="text" maxlength="80" required>
+
+      <label class="required">Condición Especial</label>
+      <input type="text" maxlength="80" required>
+    </div>
+
+    <!-- ANEXOS -->
+    <div class="section">
+      <h2>Anexos (Subir Archivos)</h2>
+      <label class="required">Fotocopia del Documento (PDF)</label>
+      <input type="file" accept="application/pdf" required>
+
+      <label class="required">Fotografía del Estudiante (JPG)</label>
+      <input type="file" accept="image/jpeg" required>
+
+      <label>Documento de la Madre (PDF)</label>
+      <input type="file" accept="application/pdf">
+
+      <label>Documento del Padre (PDF)</label>
+      <input type="file" accept="application/pdf">
+
+      <label class="required">Sisbén (PDF)</label>
+      <input type="file" accept="application/pdf" required>
+
+      <label class="required">ARS (PDF)</label>
+      <input type="file" accept="application/pdf" required>
+
+      <label>Carnet Vacunación (PDF)</label>
+      <input type="file" accept="application/pdf">
+
+      <label class="required">Certificado Médico (PDF)</label>
+      <input type="file" accept="application/pdf" required>
+
+      <label class="required">Certificado Odontológico (PDF)</label>
+      <input type="file" accept="application/pdf" required>
+
+      <label>Desparasitarías (PDF)</label>
+      <input type="file" accept="application/pdf">
+
+      <label class="required">Crecimiento y Desarrollo (PDF)</label>
+      <input type="file" accept="application/pdf" required>
+
+      <label>Documento del Responsable (PDF)</label>
+      <input type="file" accept="application/pdf">
+
+      <label class="required">Matrícula Académica (PDF)</label>
+      <input type="file" accept="application/pdf" required>
+    </div>
+
+    <button type="submit">Enviar Inscripción</button>
+  </form>
+
+</body>
+</html>

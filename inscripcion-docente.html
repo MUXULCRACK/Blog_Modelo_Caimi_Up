@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscripción Docente - CAIMIUP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #a90d0d;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="file"] {
+      background-color: #f9f9f9;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #a90d0d;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #8b0b0b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulario de Inscripción Docente</h1>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    <label for="nombre">Nombres Completos:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="apellido">Apellidos:</label>
+    <input type="text" id="apellido" name="apellido" required>
+
+    <label for="tipo-doc">Tipo de Documento:</label>
+    <select id="tipo-doc" name="tipo-doc" required>
+      <option value="">Seleccione...</option>
+      <option value="CC">Cédula de Ciudadanía</option>
+      <option value="CE">Cédula de Extranjería</option>
+      <option value="TI">Tarjeta de Identidad</option>
+    </select>
+
+    <label for="num-doc">Número de Documento:</label>
+    <input type="text" id="num-doc" name="num-doc" required>
+
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefono">Teléfono de Contacto:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+
+    <label for="titulo">Título Profesional:</label>
+    <input type="text" id="titulo" name="titulo" required>
+
+    <label for="area">Área Académica:</label>
+    <input type="text" id="area" name="area" required>
+
+    <label for="observaciones">Observaciones (opcional):</label>
+    <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+
+    <hr style="margin: 25px 0;">
+
+    <label for="hoja-vida">Hoja de Vida (PDF):</label>
+    <input type="file" id="hoja-vida" name="hoja-vida" accept="application/pdf" required>
+
+    <label for="tarjeta-prof">Tarjeta Profesional (PDF):</label>
+    <input type="file" id="tarjeta-prof" name="tarjeta-prof" accept="application/pdf" required>
+
+    <label for="doc-identidad">Documento de Identidad (PDF):</label>
+    <input type="file" id="doc-identidad" name="doc-identidad" accept="application/pdf" required>
+
+    <button type="submit">Enviar Inscripción</button>
+  </form>
+
+</body>
+</html>

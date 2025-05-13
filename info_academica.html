@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Información Académica - CAIMIUP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf6f6;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #990000;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background-color: #fff0f0;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #990000;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9dcdc;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #990000;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #b30000;
+    }
+
+    .info {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Consulta de Información Académica</h1>
+
+  <form>
+    <label for="grado">Seleccionar Grado:</label>
+    <select id="grado">
+      <option value="1">Grado 1</option>
+      <option value="2">Grado 2</option>
+      <option value="3">Grado 3</option>
+      <option value="4">Grado 4</option>
+      <option value="5">Grado 5</option>
+    </select>
+
+    <label for="materia">Seleccionar Materia:</label>
+    <select id="materia">
+      <option>Lengua Castellana</option>
+      <option>Matemáticas</option>
+      <option>Ciencias Sociales</option>
+      <option>Ciencias Naturales</option>
+      <option>Ética</option>
+      <option>Arte</option>
+      <option>Religión</option>
+      <option>Inglés</option>
+    </select>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Estudiante</th>
+          <th>Periodo 1</th>
+          <th>Periodo 2</th>
+          <th>Periodo 3</th>
+          <th>Periodo 4</th>
+          <th>Promedio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Juan Pérez</td>
+          <td>4.2</td>
+          <td>4.5</td>
+          <td>4.0</td>
+          <td></td>
+          <td>4.23</td>
+        </tr>
+        <tr>
+          <td>María Gómez</td>
+          <td>3.5</td>
+          <td>3.8</td>
+          <td>3.6</td>
+          <td>3.9</td>
+          <td>3.7</td>
+        </tr>
+        <!-- Más estudiantes aquí -->
+      </tbody>
+    </table>
+
+    <button type="submit">Exportar a PDF</button>
+
+    <p class="info">Esta tabla muestra las notas por periodo. Si un periodo está vacío, es porque aún no ha sido calificado.</p>
+  </form>
+
+</body>
+</html>

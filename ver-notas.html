@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Boletín de Notas - CAIMIUP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #a40000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 70px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 20px auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    thead {
+      background-color: #a40000;
+      color: white;
+    }
+
+    .btn {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 25px;
+      background-color: #a40000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #cc0000;
+    }
+
+    .legend, .hours {
+      margin-top: 40px;
+    }
+
+    .legend table, .hours table {
+      width: 100%;
+    }
+
+    @media print {
+      .btn, footer {
+        display: none;
+      }
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo CAIMIUP">
+    <h1>Centro de Atención Integral Materno Infantil - CAIMIUP</h1>
+    <h2>Boletín Académico del Estudiante</h2>
+  </header>
+
+  <main>
+    <h3>Nombre del Estudiante: Juan Pérez Niño</h3>
+    <p>Año Lectivo: 2025</p>
+
+    <h3>Desempeño Académico por Materia</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Materia</th>
+          <th>Periodo 1</th>
+          <th>Periodo 2</th>
+          <th>Periodo 3</th>
+          <th>Periodo 4</th>
+          <th>Desempeño</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lengua Castellana</td>
+          <td>4.5 (AA)</td>
+          <td>4.7 (AS)</td>
+          <td>4.6 (AS)</td>
+          <td>4.8 (AS)</td>
+          <td>Excelente</td>
+        </tr>
+        <tr>
+          <td>Matemáticas</td>
+          <td>3.9 (AB)</td>
+          <td>4.2 (AA)</td>
+          <td>4.4 (AA)</td>
+          <td>4.5 (AA)</td>
+          <td>Sobresaliente</td>
+        </tr>
+        <tr>
+          <td>Ciencias Naturales</td>
+          <td>3.5 (AB)</td>
+          <td>3.6 (AB)</td>
+          <td>3.8 (AB)</td>
+          <td>3.9 (AB)</td>
+          <td>Bueno</td>
+        </tr>
+        <tr>
+          <td>Educación Física</td>
+          <td>5.0 (AS)</td>
+          <td>5.0 (AS)</td>
+          <td>4.9 (AS)</td>
+          <td>5.0 (AS)</td>
+          <td>Excelente</td>
+        </tr>
+        <!-- Puedes agregar más materias aquí -->
+      </tbody>
+    </table>
+
+    <div class="legend">
+      <h3>Escala de Valoración (Valor → Letras → Significado)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Valor</th>
+            <th>Letras</th>
+            <th>Significado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>4.6 – 5.0</td><td>AS</td><td>Aprobado – Desempeño Superior</td></tr>
+          <tr><td>4.0 – 4.5</td><td>AA</td><td>Aprobado – Desempeño Alto</td></tr>
+          <tr><td>3.2 – 3.9</td><td>AB</td><td>Aprobado – Desempeño Básico</td></tr>
+          <tr><td>1.0 – 3.1</td><td>NA</td><td>No aprobado – Desempeño Bajo</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="legend">
+      <h3>Desempeño Global</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Letra</th>
+            <th>Valor en Letras</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>E</td><td>Excelente</td></tr>
+          <tr><td>S</td><td>Sobresaliente</td></tr>
+          <tr><td>B</td><td>Bueno</td></tr>
+          <tr><td>A</td><td>Aceptable</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hours">
+      <h3>Distribución de Horas Semanales por Área/Asignatura</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Área/Asignatura</th>
+            <th>Grado 1</th>
+            <th>Grado 2</th>
+            <th>Grado 3</th>
+            <th>Grado 4</th>
+            <th>Grado 5</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Lengua Castellana y Literatura</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>20</td></tr>
+          <tr><td>Matemáticas</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>15</td></tr>
+          <tr><td>Ciencias Sociales</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+          <tr><td>Ciencias Naturales</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+          <tr><td>Ética y Valores</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+          <tr><td>Educación Física</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+          <tr><td>Arte</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+          <tr><td>Religión</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+          <tr><td>Inglés</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+          <tr><th colspan="6">Total Horas Semanales</th><th>25</th></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button class="btn" onclick="window.print()">Imprimir Boletín</button>
+  </main>
+
+  <footer>
+    <p>Horario de atención: Lunes a Viernes de 8:00 a.m. a 4:00 p.m. | Contacto: caimiup@unipamplona.edu.co</p>
+  </footer>
+
+</body>
+</html>

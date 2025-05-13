@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Subir Asistencia</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff6f6;
+      padding: 30px;
+    }
+    h1 {
+      color: #990000;
+      text-align: center;
+    }
+    form {
+      background-color: #ffecec;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px #ccc;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select, input[type="date"], input[type="checkbox"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .student {
+      margin-top: 15px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 5px;
+      border-left: 5px solid #990000;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #990000;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #b30000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Subir Asistencia</h1>
+  <form>
+    <label>Grado</label>
+    <select>
+      <option>1°</option>
+      <option>2°</option>
+      <option>3°</option>
+      <option>4°</option>
+      <option>5°</option>
+    </select>
+
+    <label>Materia</label>
+    <select>
+      <option>Lengua Castellana</option>
+      <option>Matemáticas</option>
+      <option>Ciencias Sociales</option>
+      <option>Ciencias Naturales</option>
+      <!-- Agrega más materias -->
+    </select>
+
+    <label>Fecha</label>
+    <input type="date">
+
+    <div class="student">
+      <label>Juan Pérez <input type="checkbox" checked> Asistió</label>
+    </div>
+    <div class="student">
+      <label>María Gómez <input type="checkbox"> Asistió</label>
+    </div>
+    <!-- Agrega más estudiantes -->
+
+    <button type="submit">Guardar Asistencia</button>
+  </form>
+</body>
+</html>
