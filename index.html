@@ -163,15 +163,39 @@
       <a href="acerca.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Acerca de Nosotros</a>
     </nav>
   
+    
+    
     <button class="login-button" onclick="window.location.href='login.html'" style="background-color: white; color: #990000; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Iniciar Sesión</button>
-    <div style="text-align: center; margin: 30px;">
-      <button onclick="window.location.href='inscripciones.html'" style="padding: 15px 25px; background-color: #8b0b0b; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer;">
-        Inscripcion Niño
-      </button>
-    </div>
-    <div class="boton-inscripcion">
-      <a href="inscripcion-docente.html" class="btn-inscribir">Inscripción Docencia</a>
-    </div>
+    <div style="text-align: center; margin: 30px; position: relative; display: inline-block;">
+  <button onclick="toggleMenu()" style="padding: 15px 25px; background-color: #8b0b0b; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer;">
+    Inscripciones ▼
+  </button>
+  <div id="dropdown-menu" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 250px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); border-radius: 5px; z-index: 1;">
+    <a href="inscripciones.html" style="color: black; padding: 12px 16px; display: block; text-decoration: none;">Inscripción Niño</a>
+    <a href="inscripcion-docente.html" style="color: black; padding: 12px 16px; display: block; text-decoration: none;">Inscripción Docente</a>
+    <a href="inscripcion-practicante.html" style="color: black; padding: 12px 16px; display: block; text-decoration: none;">Inscripción Practicante</a>
+    <a href="inscripcion-madre-comunitaria.html" style="color: black; padding: 12px 16px; display: block; text-decoration: none;">Inscripción Madre Comunitaria</a>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("dropdown-menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('button')) {
+      var dropdown = document.getElementById("dropdown-menu");
+      if (dropdown && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      }
+    }
+  }
+</script>
+
+  
+
     
     
   </header>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscripción Practicante</title>
+</head>
+<body>
+  <h1>Formulario de Inscripción - Practicante</h1>
+  <form action="procesar-inscripcion-practicante.php" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Datos Personales</legend>
+      <label>Foto: <input type="file" name="foto" accept="image/png, image/jpeg" required></label><br/>
+      <!--label>Estado:
+        <input type="radio" name="estado" value="activo" required> Activo
+        <input type="radio" name="estado" value="inactivo"> Inactivo
+      </!--label><br/-->
+      <label>Nombres: <input type="text" name="nombres" maxlength="40" required></label><br/>
+      <label>Apellidos: <input type="text" name="apellidos" maxlength="40" required></label><br/>
+      <label>Tipo de Documento:
+        <select name="tipo_documento" required>
+          <option value="">Seleccione</option>
+          <option value="CC">Cédula</option>
+          <option value="TI">Tarjeta de Identidad</option>
+          <!-- Agrega más opciones si es necesario -->
+        </select>
+      </label><br/>
+      <label>Número de Documento: <input type="number" name="documento" required></label><br/>
+      <label>Teléfono: <input type="number" name="telefono" required></label><br/>
+      <label>Email: <input type="email" name="email" maxlength="40" required></label><br/>
+      <label>Sexo:
+        <select name="sexo" required>
+          <option value="">Seleccione</option>
+          <option value="M">Masculino</option>
+          <option value="F">Femenino</option>
+        </select>
+      </label><br/>
+      <label>Estado civil:
+        <select name="estado_civil" required>
+          <option value="">Seleccione</option>
+          <option value="soltero">Soltero</option>
+          <option value="casado">Casado</option>
+          <!-- Más opciones -->
+        </select>
+      </label><br/>
+      <label>País: <input type="text" name="pais" required></label><br/>
+      <label>Departamento: <input type="text" name="departamento" required></label><br/>
+      <label>Ciudad: <input type="text" name="ciudad" required></label><br/>
+      <label>Dirección: <input type="text" name="direccion" maxlength="40" required></label><br/>
+      <label>EPS:
+        <select name="eps" required>
+          <option value="">Seleccione</option>
+          <!-- Lista de EPS -->
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Información Profesional</legend>
+      <label>Institución:
+        <select name="institucion" required></select>
+      </label><br/>
+      <label>Programa Académico:
+        <select name="programa" required></select>
+      </label><br/>
+      <label>Facultad:
+        <select name="facultad" required></select>
+      </label><br/>
+      <label>Funciones:
+        <select name="funciones" required></select>
+      </label><br/>
+      <label>Asignaturas que impartirá:
+        <select name="asignaturas" required></select>
+      </label><br/>
+      <label>Jornada:
+        <select name="jornada" required></select>
+      </label><br/>
+      <label>UDS:
+        <select name="uds" required></select>
+      </label><br/>
+      <label>Horario UDS:
+        <select name="horario_uds" required></select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Documentación Adjunta (PDF)</legend>
+      <label>Hoja de Vida: <input type="file" name="hoja_vida" accept="application/pdf" required></label><br/>
+      <label>Documento de Identidad: <input type="file" name="doc_id" accept="application/pdf" required></label><br/>
+      <label>Antecedentes Policiales: <input type="file" name="policiales" accept="application/pdf"></label><br/>
+      <label>Antecedentes Judiciales: <input type="file" name="judiciales" accept="application/pdf"></label><br/>
+      <label>Certificados Antecedentes (Otros): <input type="file" name="otros_certificados" accept="application/pdf"></label><br/>
+      <label>Carné de Salud / EPS: <input type="file" name="carnet_eps" accept="application/pdf"></label><br/>
+      <label>Certificado de Vacunación: <input type="file" name="vacunacion" accept="application/pdf"></label><br/>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscripción Practicante</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #8b0b0b;
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    legend {
+      font-weight: bold;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    input[type="radio"] {
+      width: auto;
+      margin-right: 5px;
+    }
+    button {
+      background-color: #8b0b0b;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      display: block;
+      margin: 20px auto 0;
+    }
+    button:hover {
+      background-color: #a31212;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Inscripción - Practicante</h1>
+  <form action="procesar-inscripcion-practicante.php" method="post" enctype="multipart/form-data">
+    <!-- Secciones del formulario (igual al anterior) -->
+    <!-- Pega aquí los <fieldset> y <label> del formulario de practicante que ya viste antes -->
+    <!-- Por simplicidad, puedes copiar desde el anterior mensaje -->
+  </form>
+</body>
+</html>

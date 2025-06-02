@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscripción Madre Comunitaria</title>
+</head>
+<body>
+  <h1>Formulario de Inscripción - Madre Comunitaria</h1>
+  <form action="procesar-inscripcion-madre.php" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Datos Personales</legend>
+      <!--label>Estado:
+        <input type="radio" name="estado" value="activo" required> Activo
+        <input type="radio" name="estado" value="inactivo"> Inactivo
+      </!--label><br/-->
+      <label>Nombres: <input type="text" name="nombres" maxlength="40" required></label><br/>
+      <label>Apellidos: <input type="text" name="apellidos" maxlength="40" required></label><br/>
+      <label>Tipo de Documento:
+        <select name="tipo_documento" required></select>
+      </label><br/>
+      <label>Número de Documento: <input type="number" name="documento" required></label><br/>
+      <label>Teléfono: <input type="number" name="telefono" required></label><br/>
+      <label>Email: <input type="email" name="email" maxlength="40" required></label><br/>
+      <label>Sexo:
+        <select name="sexo" required></select>
+      </label><br/>
+      <label>Estado civil:
+        <select name="estado_civil" required></select>
+      </label><br/>
+      <label>País: <input type="text" name="pais" required></label><br/>
+      <label>Departamento: <input type="text" name="departamento" required></label><br/>
+      <label>Ciudad: <input type="text" name="ciudad" required></label><br/>
+      <label>Dirección: <input type="text" name="direccion" maxlength="40" required></label><br/>
+      <label>EPS: <select name="eps" required></select></label><br/>
+      <label>UDS: <select name="uds" required></select></label><br/>
+      <label>Horario UDS: <select name="horario_uds" required></select></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Información Profesional</legend>
+      <label>Título Profesional: <input type="text" name="titulo_profesional"></label><br/>
+      <label>Convenio: <input type="number" name="convenio"></label><br/>
+      <label>Fecha Convenio: <input type="date" name="fecha_convenio"></label><br/>
+      <label>Foto: <input type="file" name="foto" accept="image/png, image/jpeg" required></label><br/>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscripción Madre Comunitaria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #8b0b0b;
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    legend {
+      font-weight: bold;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    input[type="radio"] {
+      width: auto;
+      margin-right: 5px;
+    }
+    button {
+      background-color: #8b0b0b;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      display: block;
+      margin: 20px auto 0;
+    }
+    button:hover {
+      background-color: #a31212;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Inscripción - Madre Comunitaria</h1>
+  <form action="procesar-inscripcion-madre.php" method="post" enctype="multipart/form-data">
+    <!-- Secciones del formulario (igual al anterior) -->
+    <!-- Pega aquí los <fieldset> y <label> del formulario de madre comunitaria que ya viste antes -->
+    <!-- Por simplicidad, puedes copiar desde el anterior mensaje -->
+  </form>
+</body>
+</html>
